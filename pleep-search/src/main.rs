@@ -62,7 +62,7 @@ fn main() {
             let mut slices = Vec::new();
             for index in 0..=options.extra_offsets {
                 let offset = (index * audio.sample_rate * file.build_settings.fft_size as usize
-                    / file.build_settings.resample_rate as usize)
+                    / file.build_settings.resample_rate as usize) // hi
                     / options.extra_offsets;
                 slices.push((offset, &audio.samples[offset..]));
             }
